@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mario Restaurante | Buffet livre em Pinhais-PR</title>
+  <meta name="description" content="Buffet livre com carnes, acompanhamentos, saladas e sobremesas. Segunda a sábado, das 11h às 15h, na Rua Dezenove de Novembro, 148, Centro, Pinhais-PR.">
+  <meta name="theme-color" content="#F8F6EF">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mario Restaurante | Buffet livre em Pinhais-PR">
+  <meta property="og:description" content="Sua comida é feita com o amor da família Mario. Segunda a sábado, das 11h às 15h.">
+  <meta property="og:image" content="img/buffet.webp">
+  <link rel="icon" href="img/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Mario Restaurante",
+    "servesCuisine": "Brasileira",
+    "telephone": "+55 41 3667-1607",
+    "image": "img/buffet.webp",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Dezenove de Novembro, 148",
+      "addressLocality": "Pinhais",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "11:00",
+      "closes": "15:00"
+    }]
+  }
+  </script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo" data-topo>
+    <div class="container topo-linha">
+      <a class="marca" href="#inicio" aria-label="Mario Restaurante, voltar ao início">
+        <img src="img/logo.png" alt="" width="44" height="44">
+        <span><strong>Mario</strong><small>Restaurante</small></span>
+      </a>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="#buffet">O buffet</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#familia">A família</a>
+        <a href="#visite">Visite</a>
+        <a class="btn btn-amarelo menu-cta" data-whatsapp href="https://wa.me/554136671607">
+          <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>Chamar no WhatsApp
+        </a>
+      </nav>
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <i class="ph ph-list" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- Topo: prato montado na toalha xadrez (js/prato.js) -->
+    <section class="hero" id="inicio" data-rabiscos="12">
+      <canvas id="prato" aria-hidden="true"></canvas>
+      <div class="toldo" aria-hidden="true"></div>
+
+      <div class="selo" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs>
+            <path id="selo-circulo" d="M100,100 m-79,0 a79,79 0 1,1 158,0 a79,79 0 1,1 -158,0"/>
+          </defs>
+          <text>
+            <textPath href="#selo-circulo" textLength="490" lengthAdjust="spacing">FEITA COM O AMOR DA FAMÍLIA MARIO ✦ PINHAIS-PR ✦</textPath>
+          </text>
+        </svg>
+        <img src="img/logo.png" alt="">
+      </div>
+
+      <div class="container">
+        <div class="hero-conteudo">
+          <p class="sobretitulo">Buffet livre em Pinhais-PR</p>
+          <h1>Seu almoço <span class="marcador">favorito</span> está aqui.</h1>
+          <p class="hero-sub">Sua comida é feita com o amor da família Mario. Buffet livre de segunda a sábado, das 11h às 15h.</p>
+          <div class="hero-acoes" data-fim-texto>
+            <a class="btn btn-branco" data-whatsapp href="https://wa.me/554136671607">
+              <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>Chamar no WhatsApp
+            </a>
+            <a class="btn btn-linha" href="#buffet">Ver o buffet</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="monte" role="group" aria-labelledby="monte-titulo">
+        <p class="monte-titulo" id="monte-titulo">Monte o seu prato</p>
+        <div class="monte-itens">
+          <button type="button" class="chip" data-item="arroz" aria-pressed="false"><i class="ph-bold ph-plus" aria-hidden="true"></i>Arroz</button>
+          <button type="button" class="chip" data-item="feijao" aria-pressed="false"><i class="ph-bold ph-plus" aria-hidden="true"></i>Feijão</button>
+          <button type="button" class="chip" data-item="bife" aria-pressed="false"><i class="ph-bold ph-plus" aria-hidden="true"></i>Bife acebolado</button>
+          <button type="button" class="chip" data-item="batata" aria-pressed="false"><i class="ph-bold ph-plus" aria-hidden="true"></i>Batata frita</button>
+          <button type="button" class="chip" data-item="salada" aria-pressed="false"><i class="ph-bold ph-plus" aria-hidden="true"></i>Salada</button>
+          <button type="button" class="chip" data-item="pastel" aria-pressed="false"><i class="ph-bold ph-plus" aria-hidden="true"></i>Pastel</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="faixa" role="img" aria-label="Sua comida é feita com o amor da família Mario. Buffet livre, tempero de casa, de segunda a sábado das 11h às 15h.">
+      <div class="faixa-trilho">
+        <ul>
+          <li>Sua comida é feita com o amor da família Mario</li>
+          <li class="faixa-icone"><i class="ph-fill ph-heart" aria-hidden="true"></i></li>
+          <li>Buffet livre</li>
+          <li class="faixa-icone"><i class="ph-fill ph-fork-knife" aria-hidden="true"></i></li>
+          <li>Tempero de casa</li>
+          <li class="faixa-icone"><i class="ph-fill ph-heart" aria-hidden="true"></i></li>
+          <li>Segunda a sábado, das 11h às 15h</li>
+          <li class="faixa-icone"><i class="ph-fill ph-fork-knife" aria-hidden="true"></i></li>
+        </ul>
+        <ul aria-hidden="true">
+          <li>Sua comida é feita com o amor da família Mario</li>
+          <li class="faixa-icone"><i class="ph-fill ph-heart"></i></li>
+          <li>Buffet livre</li>
+          <li class="faixa-icone"><i class="ph-fill ph-fork-knife"></i></li>
+          <li>Tempero de casa</li>
+          <li class="faixa-icone"><i class="ph-fill ph-heart"></i></li>
+          <li>Segunda a sábado, das 11h às 15h</li>
+          <li class="faixa-icone"><i class="ph-fill ph-fork-knife"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="secao buffet" id="buffet">
+      <div class="container">
+        <header class="secao-cabeca" data-revelar>
+          <h2>Comida de verdade, do jeito que se faz em casa.</h2>
+          <p>Carnes, acompanhamentos, saladas e sobremesas lado a lado no buffet. Você monta o prato do seu jeito.</p>
+        </header>
+
+        <!-- Fotos como polaroides presas na parede do restaurante -->
+        <div class="mural">
+          <figure class="polaroid p1" data-revelar>
+            <img src="img/buffet.webp" alt="Buffet do Mario Restaurante com várias cubas de comida quente" loading="lazy">
+            <figcaption>O buffet montado todos os dias</figcaption>
+          </figure>
+          <figure class="polaroid p2" data-revelar style="--atraso:.12s">
+            <img src="img/pasteis.webp" alt="Cuba cheia de pastéis fritos e dourados" loading="lazy">
+            <figcaption>Pastéis sequinhos</figcaption>
+          </figure>
+          <figure class="polaroid p3" data-revelar style="--atraso:.24s">
+            <img src="img/batata.webp" alt="Batata frita crocante no buffet, com arroz e legumes ao fundo" loading="lazy">
+            <figcaption>Batata frita crocante</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao cardapio borda-ondas" id="cardapio" data-rabiscos="16">
+      <div class="container">
+        <div data-revelar>
+          <div class="folha">
+            <h2>O que você encontra no buffet</h2>
+            <div class="categorias">
+              <article class="categoria">
+                <h3 class="script">Carnes</h3>
+                <p>Carnes assadas, grelhadas e na chapa, saindo quentinhas da cozinha.</p>
+              </article>
+              <article class="categoria">
+                <h3 class="script">Acompanhamentos</h3>
+                <p>Arroz, feijão, massas, batata frita, pastéis e o que mais a cozinha preparar no dia.</p>
+              </article>
+              <article class="categoria">
+                <h3 class="script">Saladas</h3>
+                <p>Folhas e legumes fresquinhos para deixar o prato colorido e leve.</p>
+              </article>
+              <article class="categoria">
+                <h3 class="script">Sobremesas</h3>
+                <p>Doces para fechar o almoço do jeito certo.</p>
+              </article>
+            </div>
+            <div class="folha-rodape">
+              <p>O cardápio muda todo dia. Quer saber o que tem hoje?</p>
+              <a class="btn btn-amarelo" data-whatsapp href="https://wa.me/554136671607">
+                <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>Chamar no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao familia borda-ondas" id="familia">
+      <div class="raios-moldura" aria-hidden="true"><div class="raios"></div></div>
+      <div class="container familia-interno">
+        <img class="familia-logo" src="img/logo.png" alt="Logotipo do Mario Restaurante: um cozinheiro de chapéu de chef servindo um prato" width="132" height="132" loading="lazy">
+        <blockquote class="manifesto" data-palavras>
+          “Sua comida é feita com o amor da família <span class="marcador">Mario.</span>”
+        </blockquote>
+        <p class="familia-texto" data-revelar>Cada prato sai da nossa cozinha como se fosse para a nossa própria mesa: tempero caseiro, variedade todos os dias e atendimento acolhedor.</p>
+        <p class="assinatura" data-revelar style="--atraso:.1s">
+          <span>com carinho,</span>
+          Família Mario
+        </p>
+      </div>
+    </section>
+
+    <section class="secao visite" id="visite">
+      <div class="container visite-grade">
+        <div class="visite-info" data-revelar>
+          <h2>Venha almoçar com a gente.</h2>
+          <!-- Plaquinha de porta: mostra se está aberto agora -->
+          <div class="placa" data-status>
+            <span class="placa-titulo" data-status-titulo>Horário</span>
+            <span class="placa-texto" data-status-texto>Segunda a sábado, das 11h às 15h</span>
+          </div>
+          <dl class="dados">
+            <div>
+              <dt><i class="ph ph-map-pin" aria-hidden="true"></i>Endereço</dt>
+              <dd>Rua Dezenove de Novembro, 148<br>Centro, Pinhais-PR</dd>
+            </div>
+            <div>
+              <dt><i class="ph ph-clock" aria-hidden="true"></i>Horário</dt>
+              <dd>Segunda a sábado, das 11h às 15h<br>Domingo fechado</dd>
+            </div>
+            <div>
+              <dt><i class="ph ph-phone" aria-hidden="true"></i>Telefone</dt>
+              <dd><a href="tel:+554136671607">(41) 3667-1607</a></dd>
+            </div>
+          </dl>
+          <div class="visite-acoes">
+            <a class="btn btn-amarelo" data-whatsapp href="https://wa.me/554136671607">
+              <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>Chamar no WhatsApp
+            </a>
+            <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua+Dezenove+de+Novembro,+148,+Centro,+Pinhais+-+PR" target="_blank" rel="noopener">
+              <i class="ph ph-navigation-arrow" aria-hidden="true"></i>Como chegar
+            </a>
+          </div>
+        </div>
+        <div class="mapa" data-revelar style="--atraso:.12s">
+          <iframe title="Mapa do Mario Restaurante, Rua Dezenove de Novembro, 148, Centro, Pinhais-PR"
+            src="https://maps.google.com/maps?q=Rua%20Dezenove%20de%20Novembro%2C%20148%2C%20Centro%2C%20Pinhais%20-%20PR&amp;z=16&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape borda-ondas">
+    <div class="container rodape-grade">
+      <div class="rodape-marca">
+        <img src="img/logo.png" alt="Mario Restaurante" width="72" height="72" loading="lazy">
+        <p class="script">Feita com o amor da família Mario.</p>
+      </div>
+      <div>
+        <h3>Endereço</h3>
+        <p>Rua Dezenove de Novembro, 148<br>Centro, Pinhais-PR</p>
+      </div>
+      <div>
+        <h3>Horário</h3>
+        <p>Segunda a sábado<br>das 11h às 15h</p>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p><a href="tel:+554136671607">(41) 3667-1607</a></p>
+        <p><a data-whatsapp href="https://wa.me/554136671607">Chamar no WhatsApp</a></p>
+      </div>
+    </div>
+    <div class="container rodape-base">
+      <p>© <span data-ano>2026</span> Mario Restaurante. Pinhais-PR.</p>
+    </div>
+  </footer>
+
+  <a class="whats-flutuante" data-whatsapp href="https://wa.me/554136671607" aria-label="Chamar no WhatsApp">
+    <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>
+  </a>
+
+  <script src="js/prato.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
